@@ -49,8 +49,8 @@
 
       <div class="resource-section">
         <h3>참고 자료</h3>
-        <a class="resource-link" href="glossary.html" target="_blank" rel="noopener">
-          용어사전 별도 창 열기
+        <a class="resource-link" href="#glossarySection">
+          용어사전 보기
         </a>
       </div>
 
@@ -70,6 +70,33 @@
       <!-- 카드 그리드 -->
       <section class="cards-grid" id="cardsGrid">
         <!-- JS로 동적 생성됨 -->
+      </section>
+
+      <!-- 통합 용어사전 -->
+      <section class="embedded-glossary" id="glossarySection">
+        <header class="glossary-hero">
+          <p class="panel-week">Integrated Arts Therapy Glossary</p>
+          <h2>통합예술치료워크숍 용어사전</h2>
+          <p class="glossary-intro">
+            16주차 프로그램에 등장하는 근거 문헌 인물, 예술치료 이론, 임상 기법,
+            매체 및 평가 용어의 사전적 의미와 수업 맥락을 함께 정리했습니다.
+          </p>
+          <div class="glossary-stats" id="glossaryStats"></div>
+        </header>
+
+        <div class="glossary-tools" aria-label="용어사전 검색 및 분류">
+          <label class="search-label" for="glossarySearch">용어 검색</label>
+          <input
+            class="glossary-search"
+            id="glossarySearch"
+            type="search"
+            placeholder="인물, 용어, 영문명, 주차를 검색하세요"
+            autocomplete="off"
+          >
+          <div class="glossary-filter-row" id="glossaryFilters"></div>
+        </div>
+
+        <div class="glossary-grid" id="glossaryGrid" aria-live="polite"></div>
       </section>
     </main>
 
@@ -91,5 +118,6 @@
   </div>
 
   <script src="app.js"></script>
+  <script src="glossary.js"></script>
 </body>
 </html>

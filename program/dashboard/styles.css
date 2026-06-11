@@ -31,6 +31,7 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   min-height: 100vh;
+  scroll-behavior: smooth;
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.04) 0%, transparent 40%);
@@ -450,6 +451,13 @@ body {
 }
 
 /* Glossary Page */
+.embedded-glossary {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-glass);
+  scroll-margin-top: 2rem;
+}
+
 .glossary-page {
   background-color: var(--bg-primary);
   background-image:
@@ -481,13 +489,18 @@ body {
   color: var(--text-primary);
 }
 
-.glossary-hero h1 {
+.glossary-hero h1,
+.glossary-hero h2 {
   max-width: 760px;
   font-family: 'Outfit', 'Noto Sans KR', sans-serif;
   font-size: clamp(2rem, 5vw, 4.2rem);
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: 0;
+}
+
+.embedded-glossary .glossary-hero h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
 .glossary-intro {

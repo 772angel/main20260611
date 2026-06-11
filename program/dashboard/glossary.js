@@ -1104,6 +1104,8 @@ const glossarySearch = document.getElementById("glossarySearch");
 const glossaryStats = document.getElementById("glossaryStats");
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (!glossaryGrid || !glossaryFilters || !glossarySearch || !glossaryStats) return;
+
   renderFilters();
   renderGlossary();
   glossarySearch.addEventListener("input", (event) => {
