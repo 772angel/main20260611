@@ -67,12 +67,7 @@
         <p class="header-desc">각 주차의 카드를 클릭하면 상세 세션 구성안(도입-전개-종결) 및 매체별 치료 기법과 학술 문헌을 확인할 수 있습니다.</p>
       </header>
 
-      <!-- 카드 그리드 -->
-      <section class="cards-grid" id="cardsGrid">
-        <!-- JS로 동적 생성됨 -->
-      </section>
-
-      <!-- 통합 용어사전 -->
+      <!-- 통합 용어사전 출력 섹션 -->
       <section class="embedded-glossary" id="glossarySection">
         <header class="glossary-hero">
           <p class="panel-week">Integrated Arts Therapy Glossary</p>
@@ -85,18 +80,35 @@
         </header>
 
         <div class="glossary-tools" aria-label="용어사전 검색 및 분류">
-          <label class="search-label" for="glossarySearch">용어 검색</label>
-          <input
-            class="glossary-search"
-            id="glossarySearch"
-            type="search"
-            placeholder="인물, 용어, 영문명, 주차를 검색하세요"
-            autocomplete="off"
-          >
+          <div class="glossary-search-row">
+            <div class="glossary-search-field">
+              <label class="search-label" for="glossarySearch">용어 검색</label>
+              <input
+                class="glossary-search"
+                id="glossarySearch"
+                type="search"
+                placeholder="인물, 용어, 영문명, 주차를 검색하세요"
+                autocomplete="off"
+              >
+            </div>
+            <button class="glossary-print-btn" id="printGlossaryBtn" type="button">
+              용어사전 출력
+            </button>
+          </div>
           <div class="glossary-filter-row" id="glossaryFilters"></div>
         </div>
 
         <div class="glossary-grid" id="glossaryGrid" aria-live="polite"></div>
+        <noscript>
+          <div class="glossary-empty">
+            이 용어사전은 JavaScript가 켜져 있어야 전체 항목이 출력됩니다.
+          </div>
+        </noscript>
+      </section>
+
+      <!-- 카드 그리드 -->
+      <section class="cards-grid" id="cardsGrid">
+        <!-- JS로 동적 생성됨 -->
       </section>
     </main>
 

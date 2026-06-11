@@ -1102,6 +1102,7 @@ const glossaryGrid = document.getElementById("glossaryGrid");
 const glossaryFilters = document.getElementById("glossaryFilters");
 const glossarySearch = document.getElementById("glossarySearch");
 const glossaryStats = document.getElementById("glossaryStats");
+const printGlossaryBtn = document.getElementById("printGlossaryBtn");
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!glossaryGrid || !glossaryFilters || !glossarySearch || !glossaryStats) return;
@@ -1112,6 +1113,14 @@ document.addEventListener("DOMContentLoaded", () => {
     searchTerm = event.target.value.trim().toLowerCase();
     renderGlossary();
   });
+
+  if (printGlossaryBtn) {
+    printGlossaryBtn.addEventListener("click", printGlossary);
+  }
+});
+
+window.addEventListener("afterprint", () => {
+  document.body.classList.remove("printing-glossary");
 });
 
 function renderFilters() {
@@ -1186,6 +1195,16 @@ function renderGlossary() {
       </article>
     `)
     .join("");
+}
+
+function printGlossary() {
+  activeCategory = "all";
+  searchTerm = "";
+  glossarySearch.value = "";
+  renderFilters();
+  renderGlossary();
+  document.body.classList.add("printing-glossary");
+  window.print();
 }
 
 function formatWeeks(weeks = []) {
