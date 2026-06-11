@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통합예술치료워크숍 용어사전</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="glossary-page">
+  <main class="glossary-shell">
+    <header class="glossary-hero">
+      <a class="back-link" href="index.html">대시보드로 돌아가기</a>
+      <p class="panel-week">Integrated Arts Therapy Glossary</p>
+      <h1>통합예술치료워크숍 용어사전</h1>
+      <p class="glossary-intro">
+        16주차 프로그램에 등장하는 근거 문헌 인물, 예술치료 이론, 임상 기법,
+        매체 및 평가 용어의 사전적 의미와 수업 맥락을 함께 정리했습니다.
+      </p>
+      <div class="glossary-stats" id="glossaryStats"></div>
+    </header>
+
+    <section class="glossary-tools" aria-label="용어사전 검색 및 분류">
+      <label class="search-label" for="glossarySearch">용어 검색</label>
+      <input
+        class="glossary-search"
+        id="glossarySearch"
+        type="search"
+        placeholder="인물, 용어, 영문명, 주차를 검색하세요"
+        autocomplete="off"
+      >
+      <div class="glossary-filter-row" id="glossaryFilters"></div>
+    </section>
+
+    <section class="glossary-grid" id="glossaryGrid" aria-live="polite"></section>
+  </main>
+
+  <script src="glossary.js"></script>
+</body>
+</html>
